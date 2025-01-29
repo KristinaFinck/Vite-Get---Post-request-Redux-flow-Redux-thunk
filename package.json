@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "git@github.com:KristinaFinck/Vite-Get---Post-request-Redux-flow-Redux-thunk.git",
   "scripts": {
     "dev": "vite --open",
     "build": "tsc && vite build",

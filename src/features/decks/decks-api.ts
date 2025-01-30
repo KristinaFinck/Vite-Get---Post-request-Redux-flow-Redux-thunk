@@ -6,3 +6,37 @@ export const instance = axios.create({
     'x-auth-skip': true,
   },
 })
+export const decksApi = () => {
+   fetchDesks() {
+     return instance.get<any>('v2/desks')
+  }
+}
+export type FetchDecksResponse = {
+  items: Deck[];
+  pagination: Pagination;
+  maxCardsCount: number;
+};
+
+export type Author = {
+  id: string;
+  name: string;
+};
+
+export type Deck = {
+  author: Author;
+  id: string;
+  userId: string;
+  name: string;
+  isPrivate: boolean;
+  cover: string;
+  created: string;
+  updated: string;
+  cardsCount: number;
+};
+
+export type Pagination = {
+  currentPage: number;
+  itemsPerPage: number;
+  totalPages: number;
+  totalItems: number;
+};

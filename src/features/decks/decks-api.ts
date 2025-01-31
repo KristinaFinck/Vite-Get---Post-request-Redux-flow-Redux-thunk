@@ -10,6 +10,11 @@ export const decksApi = {
    fetchDecks() {
      return instance.get<FetchDecksResponse>('v2/decks')
   },
+  createDeck(params: AddDeckParams) {
+     return instance.post<FetchDecksResponse>('/v1/decks', params)},
+}
+export type AddDeckParams = {
+  name: string
 }
 export type FetchDecksResponse = {
   items: Deck[];
